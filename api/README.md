@@ -12,6 +12,35 @@ npm install
 - Aplicar migracoes (quando criadas): `npm run prisma:migrate`
 - Deploy migracoes em prod: `npm run prisma:deploy`
 
+## Testes
+
+Instalacao (dentro de `api`):
+
+```powershell
+cd api
+npm install
+```
+
+Rodar testes unitarios:
+
+```powershell
+npm test
+```
+
+Rodar em watch durante desenvolvimento:
+
+```powershell
+npm run test:watch
+```
+
+Gerar cobertura:
+
+```powershell
+npm run test:cov
+```
+
+Os testes de exemplo incluem verificacoes para `TenantMiddleware` e `TenantActiveGuard`.
+
 ## Desenvolvimento
 ```bash
 npm run start:dev
