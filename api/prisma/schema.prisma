@@ -1,0 +1,200 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  TENANT_ADMIN
+  ARCHITECT
+  CLIENT
+}
+
+enum MembershipRole {
+  TENANT_ADMIN
+  ARCHITECT
+  CLIENT
+}
+
+enum TenantStatus {
+  ACTIVE
+  PAUSED
+}
+
+enum BriefingStatus {
+  DRAFT
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum AiEventType {
+  SUGGESTIONS
+  SUMMARY
+  CONFLICT
+}
+
+enum Currency {
+  USD
+  BRL
+  EUR
+}
+
+model Plan {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  priceCents  Int      @default(0)
+  currency    Currency @default(USD)
+  limitsJson  Json     @default("{}")
+  isDefault   Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  tenants     Tenant[]
+}
+
+model Tenant {
+  id              String    @id @default(uuid())
+  name            String
+  slug            String    @unique
+  status          TenantStatus @default(ACTIVE)
+  planId          String
+  plan            Plan      @relation(fields: [planId], references: [id])
+  limitsOverride  Json      @default("{}")
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @default(now())
+  memberships     Membership[]
+  templates       Template[]
+  briefings       Briefing[]
+  aiEvents        AiEvent[]
+  images          Image[]
+  templateVersions TemplateVersion[]
+  billingUsage    BillingUsage[]
+  auditLogs       AuditLog[]
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique @db.Citext
+  passwordHash String
+  role         UserRole
+  locale       String   @default("pt-BR")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @default(now())
+  memberships  Membership[]
+  templates    Template[]
+  briefings    Briefing[] @relation("BriefingClient")
+  auditLogs    AuditLog[] @relation("AuditActor")
+  imagesOwned  Image[]   @relation("ImageOwner")
+}
+
+model Membership {
+  id        String         @id @default(uuid())
+  tenantId  String
+  userId    String
+  role      MembershipRole
+  createdAt DateTime       @default(now())
+  tenant    Tenant         @relation(fields: [tenantId], references: [id])
+  user      User           @relation(fields: [userId], references: [id])
+
+  @@unique([tenantId, userId])
+}
+
+model Template {
+  id          String    @id @default(uuid())
+  tenantId    String
+  ownerId     String
+  title       String
+  jsonSchema  Json
+  version     Int       @default(1)
+  isPublic    Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @default(now())
+  tenant      Tenant    @relation(fields: [tenantId], references: [id])
+  owner       User      @relation(fields: [ownerId], references: [id])
+  briefings   Briefing[]
+  versions    TemplateVersion[]
+}
+
+model TemplateVersion {
+  id          String   @id @default(uuid())
+  tenantId    String
+  templateId  String
+  version     Int
+  jsonSchema  Json
+  createdAt   DateTime @default(now())
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  template    Template @relation(fields: [templateId], references: [id])
+
+  @@unique([templateId, version])
+}
+
+model Briefing {
+  id          String          @id @default(uuid())
+  tenantId    String
+  templateId  String
+  clientId    String?
+  status      BriefingStatus  @default(DRAFT)
+  progress    Int             @default(0)
+  answersJson Json            @default("{}")
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @default(now())
+  tenant      Tenant          @relation(fields: [tenantId], references: [id])
+  template    Template        @relation(fields: [templateId], references: [id])
+  client      User?           @relation("BriefingClient", fields: [clientId], references: [id])
+  aiEvents    AiEvent[]
+}
+
+model AiEvent {
+  id          String      @id @default(uuid())
+  tenantId    String
+  briefingId  String
+  eventType   AiEventType
+  payload     Json
+  createdAt   DateTime    @default(now())
+  tenant      Tenant      @relation(fields: [tenantId], references: [id])
+  briefing    Briefing    @relation(fields: [briefingId], references: [id])
+}
+
+model Image {
+  id          String   @id @default(uuid())
+  tenantId    String
+  ownerId     String
+  url         String
+  label       String?
+  metadata    Json     @default("{}")
+  createdAt   DateTime @default(now())
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  owner       User     @relation("ImageOwner", fields: [ownerId], references: [id])
+}
+
+model BillingUsage {
+  id            String   @id @default(uuid())
+  tenantId      String
+  periodMonth   String
+  briefingsCount Int     @default(0)
+  aiTokens      BigInt   @default(0)
+  storageMb     Int      @default(0)
+  pdfExports    Int      @default(0)
+  createdAt     DateTime @default(now())
+  tenant        Tenant   @relation(fields: [tenantId], references: [id])
+
+  @@unique([tenantId, periodMonth])
+}
+
+model AuditLog {
+  id           String   @id @default(uuid())
+  tenantId     String?
+  actorUserId  String?
+  action       String
+  target       String?
+  metadata     Json     @default("{}")
+  createdAt    DateTime @default(now())
+  tenant       Tenant?  @relation(fields: [tenantId], references: [id])
+  actor        User?    @relation("AuditActor", fields: [actorUserId], references: [id])
+
+  @@index([tenantId])
+  @@index([actorUserId])
+}
