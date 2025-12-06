@@ -8,10 +8,25 @@ export class TenantMiddleware implements NestMiddleware {
 
   async use(req: Request, res: Response, next: NextFunction) {
     // Resolve tenant by header x-tenant or subdomain
-    const tenantSlug = req.headers['x-tenant'] as string || getSubdomain(req.hostname);
-    if (!tenantSlug) throw new BadRequestException('Tenant não informado');
+    const requestPath = req.path || '';
+    const isAuthPath = requestPath.startsWith('/auth');
+    const tenantSlug = (req.headers['x-tenant'] as string) || getSubdomain(req.hostname);
+
+    if (!tenantSlug) {
+      if (isAuthPath) {
+        return next();
+      }
+      throw new BadRequestException('Tenant não informado');
+    }
+
     const tenant = await this.prisma.tenant.findUnique({ where: { slug: tenantSlug } });
-    if (!tenant) throw new BadRequestException('Tenant não encontrado');
+    if (!tenant) {
+      if (isAuthPath) {
+        return next();
+      }
+      throw new BadRequestException('Tenant não encontrado');
+    }
+
     (req as any).tenant = tenant;
     next();
   }

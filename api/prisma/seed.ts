@@ -1,9 +1,13 @@
 import { PrismaClient, Currency, UserRole, TenantStatus } from '@prisma/client';
+import * as bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
 async function main() {
   console.log('🌱 Seeding database...');
+
+  const defaultPassword = process.env.SEED_DEFAULT_PASSWORD || 'ChangeMe123!';
+  const hashedPassword = await bcrypt.hash(defaultPassword, 10);
 
   // Plano Starter (grátis)
   const planStarter = await prisma.plan.upsert({
@@ -48,7 +52,7 @@ async function main() {
     create: {
       name: 'Super Admin',
       email: 'admin@brief.ai',
-      passwordHash: '$2b$10$example_hash_replace_in_production', // Replace with real bcrypt hash
+      passwordHash: hashedPassword,
       role: UserRole.SUPER_ADMIN,
       locale: 'pt-BR',
     },
@@ -74,7 +78,7 @@ async function main() {
     create: {
       name: 'Arquiteto Demo',
       email: 'arquiteto@brief.ai',
-      passwordHash: '$2b$10$example_hash_replace_in_production', // Replace with real bcrypt hash
+      passwordHash: hashedPassword,
       role: UserRole.TENANT_ADMIN,
       locale: 'pt-BR',
     },
@@ -153,6 +157,7 @@ async function main() {
     architectDemo,
     templateDemo,
   });
+  console.log('🔐 Default seed password:', defaultPassword);
 }
 
 main()
