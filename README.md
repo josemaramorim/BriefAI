@@ -11,13 +11,13 @@ Requisitos: `psql` instalado e acesso de rede ao host.
 
 PowerShell:
 ```powershell
-$env:DATABASE_URL="postgresql://postgres:Bauex11hxClXD9T1zq6szjp4NhpmhbsN2nRaaTvUKq8PXx9cZqnrLmQf8QSB1FC8@n8n.jrvconsultoria.shop:5432/imobiliaria_db?schema=public"
+$env:DATABASE_URL="postgresql://postgres:Bauex11hxClXD9T1zq6szjp4NhpmhbsN2nRaaTvUKq8PXx9cZqnrLmQf8QSB1FC8@n8n.jrvconsultoria.shop:5432/brief_ai?schema=public"
 psql $env:DATABASE_URL -f docs/db-schema.sql
 ```
 
 Bash:
 ```bash
-export DATABASE_URL="postgresql://postgres:Bauex11hxClXD9T1zq6szjp4NhpmhbsN2nRaaTvUKq8PXx9cZqnrLmQf8QSB1FC8@n8n.jrvconsultoria.shop:5432/imobiliaria_db?schema=public"
+export DATABASE_URL="postgresql://postgres:Bauex11hxClXD9T1zq6szjp4NhpmhbsN2nRaaTvUKq8PXx9cZqnrLmQf8QSB1FC8@n8n.jrvconsultoria.shop:5432/brief_ai?schema=public"
 psql "$DATABASE_URL" -f docs/db-schema.sql
 ```
 
