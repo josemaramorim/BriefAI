@@ -21,7 +21,7 @@ describe('TenantMiddleware', () => {
   });
 
   it('should resolve tenant by header', async () => {
-    (mockPrisma.tenant.findUnique as jest.Mock).mockResolvedValue({ id: 't1', slug: 'demo' });
+    ((mockPrisma as any).tenant.findUnique as jest.Mock).mockResolvedValue({ id: 't1', slug: 'demo' });
     const req: any = { headers: { 'x-tenant': 'demo' }, hostname: 'localhost' };
     const res: any = {};
     const next = jest.fn();
