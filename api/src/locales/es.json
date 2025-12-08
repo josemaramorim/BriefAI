@@ -34,6 +34,12 @@
     "CLIENT_NOT_FOUND": "Cliente no encontrado",
     "INVALID_ANSWERS": "Datos inválidos: {errors}"
   },
+  "AI": {
+    "GENERATION_FAILED": "Error al generar sugerencias: {error}",
+    "REFINEMENT_FAILED": "Error al refinar texto: {error}",
+    "SUGGESTIONS_GENERATED": "Sugerencias generadas exitosamente",
+    "TEXT_REFINED": "Texto refinado exitosamente"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciales inválidas",
     "USER_NOT_FOUND": "Usuario no encontrado",
