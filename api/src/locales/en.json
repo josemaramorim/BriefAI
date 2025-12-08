@@ -24,6 +24,16 @@
     "UNPUBLISHED": "Template unpublished successfully",
     "INVALID_SCHEMA": "Invalid JSON Schema"
   },
+  "BRIEFS": {
+    "NOT_FOUND": "Brief not found",
+    "CREATED": "Brief created successfully",
+    "UPDATED": "Brief updated successfully",
+    "DELETED": "Brief deleted successfully",
+    "ACCESS_DENIED": "Access denied to this brief",
+    "DELETE_DENIED": "Only tenant members can delete briefs",
+    "CLIENT_NOT_FOUND": "Client not found",
+    "INVALID_ANSWERS": "Invalid data: {errors}"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Invalid credentials",
     "USER_NOT_FOUND": "User not found",
