@@ -50,6 +50,14 @@
     "COMMENT_NOT_FOUND": "Comentário não encontrado",
     "COMMENT_DELETED": "Comentário excluído com sucesso"
   },
+  "ATTACHMENTS": {
+    "NOT_FOUND": "Anexo não encontrado",
+    "FILE_TOO_LARGE": "Arquivo muito grande. Tamanho máximo: {maxSize}",
+    "INVALID_FILE_TYPE": "Tipo de arquivo não permitido",
+    "NO_PERMISSION": "Sem permissão para excluir este anexo",
+    "DELETED": "Anexo excluído com sucesso",
+    "UPLOADED": "Arquivo enviado com sucesso"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciais inválidas",
     "USER_NOT_FOUND": "Usuário não encontrado",

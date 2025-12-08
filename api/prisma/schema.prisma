@@ -78,6 +78,7 @@ model Tenant {
   templateVersions TemplateVersion[]
   billingUsage    BillingUsage[]
   auditLogs       AuditLog[]
+  attachments     Attachment[]
 }
 
 model User {
@@ -96,6 +97,7 @@ model User {
   imagesOwned     Image[]   @relation("ImageOwner")
   collaborations  Collaboration[]
   comments        Comment[]
+  attachments     Attachment[]
 }
 
 model Membership {
@@ -124,6 +126,7 @@ model Template {
   owner       User      @relation(fields: [ownerId], references: [id])
   briefings   Briefing[]
   versions    TemplateVersion[]
+  attachments Attachment[]
 }
 
 model TemplateVersion {
@@ -155,6 +158,7 @@ model Briefing {
   aiEvents       AiEvent[]
   collaborations Collaboration[]
   comments       Comment[]
+  attachments    Attachment[]
 }
 
 model AiEvent {
@@ -220,6 +224,32 @@ model Comment {
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([briefingId])
+  @@index([userId])
+}
+
+model Attachment {
+  id              String    @id @default(uuid())
+  tenantId        String
+  briefingId      String?
+  templateId      String?
+  userId          String
+  originalName    String
+  mimeType        String
+  size            Int
+  storageProvider String    @default("local")
+  storageKey      String
+  storageMetadata Json      @default("{}")
+  thumbnailKey    String?
+  previewUrl      String?
+  createdAt       DateTime  @default(now())
+  tenant          Tenant    @relation(fields: [tenantId], references: [id], onDelete: Cascade)
+  briefing        Briefing? @relation(fields: [briefingId], references: [id], onDelete: Cascade)
+  template        Template? @relation(fields: [templateId], references: [id], onDelete: Cascade)
+  user            User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([briefingId])
+  @@index([templateId])
+  @@index([tenantId])
   @@index([userId])
 }
 
