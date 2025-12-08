@@ -9,11 +9,15 @@ export class TenantMiddleware implements NestMiddleware {
   async use(req: Request, res: Response, next: NextFunction) {
     // Resolve tenant by header x-tenant or subdomain
     const requestPath = req.path || '';
-    const isAuthPath = requestPath.startsWith('/auth');
+    const isPublicPath = 
+      requestPath.startsWith('/auth') || 
+      requestPath.startsWith('/health') ||
+      requestPath.startsWith('/api');
+    
     const tenantSlug = (req.headers['x-tenant'] as string) || getSubdomain(req.hostname);
 
     if (!tenantSlug) {
-      if (isAuthPath) {
+      if (isPublicPath) {
         return next();
       }
       throw new BadRequestException('Tenant não informado');
@@ -21,7 +25,7 @@ export class TenantMiddleware implements NestMiddleware {
 
     const tenant = await this.prisma.tenant.findUnique({ where: { slug: tenantSlug } });
     if (!tenant) {
-      if (isAuthPath) {
+      if (isPublicPath) {
         return next();
       }
       throw new BadRequestException('Tenant não encontrado');

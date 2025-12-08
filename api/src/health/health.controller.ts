@@ -1,12 +1,9 @@
-import { Controller, Get, UseGuards } from '@nestjs/common';
-import { TenantActiveGuard } from '../tenant/tenant.guard';
-import { Tenant } from '../tenant/tenant.decorator';
+import { Controller, Get } from '@nestjs/common';
 
 @Controller('health')
 export class HealthController {
   @Get()
-  @UseGuards(TenantActiveGuard)
-  ping(@Tenant() tenant: any) {
-    return { status: 'ok', ts: new Date().toISOString(), tenant: tenant?.slug };
+  ping() {
+    return { status: 'ok', ts: new Date().toISOString() };
   }
 }

@@ -4,7 +4,6 @@ import { I18nModule, QueryResolver, AcceptLanguageResolver } from 'nestjs-i18n';
 import { PrismaModule } from './prisma/prisma.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
-import { TenantsModule } from './tenants/tenants.module';
 import { TemplatesModule } from './templates/templates.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
 
@@ -24,7 +23,6 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     PrismaModule,
     HealthModule,
     AuthModule,
-    TenantsModule,
     TemplatesModule,
   ],
 })
