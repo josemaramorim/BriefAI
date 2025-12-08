@@ -1,0 +1,42 @@
+{
+  "COMMON": {
+    "SUCCESS": "Operación completada exitosamente",
+    "ERROR": "Error al procesar la solicitud",
+    "UNAUTHORIZED": "No autorizado",
+    "FORBIDDEN": "Acceso denegado",
+    "NOT_FOUND": "Recurso no encontrado"
+  },
+  "TENANTS": {
+    "NOT_FOUND": "Inquilino no encontrado",
+    "ALREADY_EXISTS": "Inquilino con este slug ya existe",
+    "CREATED": "Inquilino creado exitosamente",
+    "UPDATED": "Inquilino actualizado exitosamente",
+    "PAUSED": "Inquilino pausado exitosamente",
+    "RESUMED": "Inquilino reanudado exitosamente",
+    "LIMITS_ADJUSTED": "Límites del inquilino ajustados exitosamente"
+  },
+  "TEMPLATES": {
+    "NOT_FOUND": "Plantilla no encontrada",
+    "CREATED": "Plantilla creada exitosamente",
+    "UPDATED": "Plantilla actualizada exitosamente",
+    "DELETED": "Plantilla eliminada exitosamente",
+    "PUBLISHED": "Plantilla publicada exitosamente",
+    "UNPUBLISHED": "Plantilla despublicada exitosamente",
+    "INVALID_SCHEMA": "JSON Schema inválido"
+  },
+  "AUTH": {
+    "INVALID_CREDENTIALS": "Credenciales inválidas",
+    "USER_NOT_FOUND": "Usuario no encontrado",
+    "REGISTER_SUCCESS": "Registro completado exitosamente",
+    "LOGIN_SUCCESS": "Inicio de sesión exitoso",
+    "TOKEN_EXPIRED": "Token expirado",
+    "INVALID_TOKEN": "Token inválido",
+    "ACCESS_DENIED": "Acceso denegado para este recurso"
+  },
+  "VALIDATION": {
+    "REQUIRED_FIELD": "Campo requerido",
+    "INVALID_EMAIL": "Correo electrónico inválido",
+    "PASSWORD_TOO_SHORT": "La contraseña debe tener al menos 8 caracteres",
+    "INVALID_UUID": "ID inválido"
+  }
+}
