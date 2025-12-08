@@ -50,6 +50,14 @@
     "COMMENT_NOT_FOUND": "Comment not found",
     "COMMENT_DELETED": "Comment deleted successfully"
   },
+  "ATTACHMENTS": {
+    "NOT_FOUND": "Attachment not found",
+    "FILE_TOO_LARGE": "File too large. Maximum size: {maxSize}",
+    "INVALID_FILE_TYPE": "File type not allowed",
+    "NO_PERMISSION": "No permission to delete this attachment",
+    "DELETED": "Attachment deleted successfully",
+    "UPLOADED": "File uploaded successfully"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Invalid credentials",
     "USER_NOT_FOUND": "User not found",

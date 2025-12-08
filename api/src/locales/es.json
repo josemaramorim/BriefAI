@@ -45,10 +45,18 @@
     "USER_NOT_FOUND": "Usuario no encontrado",
     "ALREADY_EXISTS": "El usuario ya es colaborador",
     "NOT_FOUND": "Colaboración no encontrada",
-    "REMOVED": "Colaborador eliminado exitosamente",
+    "REMOVED": "Colaborador eliminado con éxito",
     "INSUFFICIENT_PERMISSION": "Permiso insuficiente para esta acción",
     "COMMENT_NOT_FOUND": "Comentario no encontrado",
-    "COMMENT_DELETED": "Comentario eliminado exitosamente"
+    "COMMENT_DELETED": "Comentario eliminado con éxito"
+  },
+  "ATTACHMENTS": {
+    "NOT_FOUND": "Archivo adjunto no encontrado",
+    "FILE_TOO_LARGE": "Archivo demasiado grande. Tamaño máximo: {maxSize}",
+    "INVALID_FILE_TYPE": "Tipo de archivo no permitido",
+    "NO_PERMISSION": "Sin permiso para eliminar este archivo adjunto",
+    "DELETED": "Archivo adjunto eliminado con éxito",
+    "UPLOADED": "Archivo cargado con éxito"
   },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciales inválidas",
