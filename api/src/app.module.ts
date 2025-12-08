@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { TemplatesModule } from './templates/templates.module';
 import { BriefsModule } from './briefs/briefs.module';
 import { AiModule } from './ai/ai.module';
+import { CollaborationsModule } from './collaborations/collaborations.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
 
 @Module({
@@ -30,6 +31,7 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     TemplatesModule,
     BriefsModule,
     AiModule,
+    CollaborationsModule,
   ],
 })
 export class AppModule {

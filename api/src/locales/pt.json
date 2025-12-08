@@ -40,6 +40,16 @@
     "SUGGESTIONS_GENERATED": "Sugestões geradas com sucesso",
     "TEXT_REFINED": "Texto refinado com sucesso"
   },
+  "COLLABORATIONS": {
+    "NO_PERMISSION": "Sem permissão para esta ação",
+    "USER_NOT_FOUND": "Usuário não encontrado",
+    "ALREADY_EXISTS": "Usuário já é colaborador",
+    "NOT_FOUND": "Colaboração não encontrada",
+    "REMOVED": "Colaborador removido com sucesso",
+    "INSUFFICIENT_PERMISSION": "Permissão insuficiente para esta ação",
+    "COMMENT_NOT_FOUND": "Comentário não encontrado",
+    "COMMENT_DELETED": "Comentário excluído com sucesso"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciais inválidas",
     "USER_NOT_FOUND": "Usuário não encontrado",
