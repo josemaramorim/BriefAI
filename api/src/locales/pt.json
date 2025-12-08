@@ -1,0 +1,42 @@
+{
+  "COMMON": {
+    "SUCCESS": "Operação realizada com sucesso",
+    "ERROR": "Erro ao processar solicitação",
+    "UNAUTHORIZED": "Não autorizado",
+    "FORBIDDEN": "Acesso negado",
+    "NOT_FOUND": "Recurso não encontrado"
+  },
+  "TENANTS": {
+    "NOT_FOUND": "Tenant não encontrado",
+    "ALREADY_EXISTS": "Tenant com este slug já existe",
+    "CREATED": "Tenant criado com sucesso",
+    "UPDATED": "Tenant atualizado com sucesso",
+    "PAUSED": "Tenant pausado com sucesso",
+    "RESUMED": "Tenant retomado com sucesso",
+    "LIMITS_ADJUSTED": "Limites do tenant ajustados com sucesso"
+  },
+  "TEMPLATES": {
+    "NOT_FOUND": "Template não encontrado",
+    "CREATED": "Template criado com sucesso",
+    "UPDATED": "Template atualizado com sucesso",
+    "DELETED": "Template excluído com sucesso",
+    "PUBLISHED": "Template publicado com sucesso",
+    "UNPUBLISHED": "Template despublicado com sucesso",
+    "INVALID_SCHEMA": "JSON Schema inválido"
+  },
+  "AUTH": {
+    "INVALID_CREDENTIALS": "Credenciais inválidas",
+    "USER_NOT_FOUND": "Usuário não encontrado",
+    "REGISTER_SUCCESS": "Registro realizado com sucesso",
+    "LOGIN_SUCCESS": "Login realizado com sucesso",
+    "TOKEN_EXPIRED": "Token expirado",
+    "INVALID_TOKEN": "Token inválido",
+    "ACCESS_DENIED": "Acesso negado para este recurso"
+  },
+  "VALIDATION": {
+    "REQUIRED_FIELD": "Campo obrigatório",
+    "INVALID_EMAIL": "E-mail inválido",
+    "PASSWORD_TOO_SHORT": "Senha deve ter no mínimo 8 caracteres",
+    "INVALID_UUID": "ID inválido"
+  }
+}

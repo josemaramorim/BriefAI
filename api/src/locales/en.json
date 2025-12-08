@@ -1,0 +1,42 @@
+{
+  "COMMON": {
+    "SUCCESS": "Operation completed successfully",
+    "ERROR": "Error processing request",
+    "UNAUTHORIZED": "Unauthorized",
+    "FORBIDDEN": "Access denied",
+    "NOT_FOUND": "Resource not found"
+  },
+  "TENANTS": {
+    "NOT_FOUND": "Tenant not found",
+    "ALREADY_EXISTS": "Tenant with this slug already exists",
+    "CREATED": "Tenant created successfully",
+    "UPDATED": "Tenant updated successfully",
+    "PAUSED": "Tenant paused successfully",
+    "RESUMED": "Tenant resumed successfully",
+    "LIMITS_ADJUSTED": "Tenant limits adjusted successfully"
+  },
+  "TEMPLATES": {
+    "NOT_FOUND": "Template not found",
+    "CREATED": "Template created successfully",
+    "UPDATED": "Template updated successfully",
+    "DELETED": "Template deleted successfully",
+    "PUBLISHED": "Template published successfully",
+    "UNPUBLISHED": "Template unpublished successfully",
+    "INVALID_SCHEMA": "Invalid JSON Schema"
+  },
+  "AUTH": {
+    "INVALID_CREDENTIALS": "Invalid credentials",
+    "USER_NOT_FOUND": "User not found",
+    "REGISTER_SUCCESS": "Registration completed successfully",
+    "LOGIN_SUCCESS": "Login successful",
+    "TOKEN_EXPIRED": "Token expired",
+    "INVALID_TOKEN": "Invalid token",
+    "ACCESS_DENIED": "Access denied for this resource"
+  },
+  "VALIDATION": {
+    "REQUIRED_FIELD": "Required field",
+    "INVALID_EMAIL": "Invalid email",
+    "PASSWORD_TOO_SHORT": "Password must have at least 8 characters",
+    "INVALID_UUID": "Invalid ID"
+  }
+}
