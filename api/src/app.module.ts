@@ -1,4 +1,5 @@
 import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import * as path from 'path';
 import { I18nModule, QueryResolver, AcceptLanguageResolver } from 'nestjs-i18n';
 import { PrismaModule } from './prisma/prisma.module';
@@ -6,10 +7,12 @@ import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
 import { TemplatesModule } from './templates/templates.module';
 import { BriefsModule } from './briefs/briefs.module';
+import { AiModule } from './ai/ai.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
 
 @Module({
   imports: [
+    ConfigModule.forRoot({ isGlobal: true }),
     I18nModule.forRoot({
       fallbackLanguage: 'pt',
       loaderOptions: {
@@ -26,6 +29,7 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     AuthModule,
     TemplatesModule,
     BriefsModule,
+    AiModule,
   ],
 })
 export class AppModule {
