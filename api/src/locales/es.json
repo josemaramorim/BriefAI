@@ -24,6 +24,16 @@
     "UNPUBLISHED": "Plantilla despublicada exitosamente",
     "INVALID_SCHEMA": "JSON Schema inválido"
   },
+  "BRIEFS": {
+    "NOT_FOUND": "Brief no encontrado",
+    "CREATED": "Brief creado exitosamente",
+    "UPDATED": "Brief actualizado exitosamente",
+    "DELETED": "Brief eliminado exitosamente",
+    "ACCESS_DENIED": "Acceso denegado a este brief",
+    "DELETE_DENIED": "Solo los miembros del tenant pueden eliminar briefs",
+    "CLIENT_NOT_FOUND": "Cliente no encontrado",
+    "INVALID_ANSWERS": "Datos inválidos: {errors}"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciales inválidas",
     "USER_NOT_FOUND": "Usuario no encontrado",

@@ -24,6 +24,16 @@
     "UNPUBLISHED": "Template despublicado com sucesso",
     "INVALID_SCHEMA": "JSON Schema inválido"
   },
+  "BRIEFS": {
+    "NOT_FOUND": "Brief não encontrado",
+    "CREATED": "Brief criado com sucesso",
+    "UPDATED": "Brief atualizado com sucesso",
+    "DELETED": "Brief excluído com sucesso",
+    "ACCESS_DENIED": "Acesso negado a este brief",
+    "DELETE_DENIED": "Apenas membros do tenant podem excluir briefs",
+    "CLIENT_NOT_FOUND": "Cliente não encontrado",
+    "INVALID_ANSWERS": "Dados inválidos: {errors}"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciais inválidas",
     "USER_NOT_FOUND": "Usuário não encontrado",

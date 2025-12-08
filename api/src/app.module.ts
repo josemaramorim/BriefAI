@@ -5,6 +5,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
 import { TemplatesModule } from './templates/templates.module';
+import { BriefsModule } from './briefs/briefs.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
 
 @Module({
@@ -24,6 +25,7 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     HealthModule,
     AuthModule,
     TemplatesModule,
+    BriefsModule,
   ],
 })
 export class AppModule {
