@@ -40,6 +40,16 @@
     "SUGGESTIONS_GENERATED": "Suggestions generated successfully",
     "TEXT_REFINED": "Text refined successfully"
   },
+  "COLLABORATIONS": {
+    "NO_PERMISSION": "No permission for this action",
+    "USER_NOT_FOUND": "User not found",
+    "ALREADY_EXISTS": "User is already a collaborator",
+    "NOT_FOUND": "Collaboration not found",
+    "REMOVED": "Collaborator removed successfully",
+    "INSUFFICIENT_PERMISSION": "Insufficient permission for this action",
+    "COMMENT_NOT_FOUND": "Comment not found",
+    "COMMENT_DELETED": "Comment deleted successfully"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Invalid credentials",
     "USER_NOT_FOUND": "User not found",
