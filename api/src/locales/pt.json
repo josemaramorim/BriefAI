@@ -58,6 +58,18 @@
     "DELETED": "Anexo excluído com sucesso",
     "UPLOADED": "Arquivo enviado com sucesso"
   },
+  "EXPORTS": {
+    "CLIENT": "Cliente",
+    "STATUS": "Status",
+    "PROGRESS": "Progresso",
+    "CREATED_AT": "Criado em",
+    "ANSWERS": "Respostas",
+    "SUMMARY": "Resumo",
+    "COMPLETED_FIELDS": "Campos preenchidos: {count}",
+    "COMMENTS": "Comentários",
+    "ATTACHMENTS": "Anexos",
+    "UPLOADED_BY": "Enviado por"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Credenciais inválidas",
     "USER_NOT_FOUND": "Usuário não encontrado",

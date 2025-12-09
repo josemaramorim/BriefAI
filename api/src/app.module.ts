@@ -10,6 +10,7 @@ import { BriefsModule } from './briefs/briefs.module';
 import { AiModule } from './ai/ai.module';
 import { CollaborationsModule } from './collaborations/collaborations.module';
 import { AttachmentsModule } from './attachments/attachments.module';
+import { ExportsModule } from './exports/exports.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
 
 @Module({
@@ -34,6 +35,7 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     AiModule,
     CollaborationsModule,
     AttachmentsModule,
+    ExportsModule,
   ],
 })
 export class AppModule {
