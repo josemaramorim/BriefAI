@@ -58,6 +58,18 @@
     "DELETED": "Attachment deleted successfully",
     "UPLOADED": "File uploaded successfully"
   },
+  "EXPORTS": {
+    "CLIENT": "Client",
+    "STATUS": "Status",
+    "PROGRESS": "Progress",
+    "CREATED_AT": "Created at",
+    "ANSWERS": "Answers",
+    "SUMMARY": "Summary",
+    "COMPLETED_FIELDS": "Completed fields: {count}",
+    "COMMENTS": "Comments",
+    "ATTACHMENTS": "Attachments",
+    "UPLOADED_BY": "Uploaded by"
+  },
   "AUTH": {
     "INVALID_CREDENTIALS": "Invalid credentials",
     "USER_NOT_FOUND": "User not found",
