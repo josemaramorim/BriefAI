@@ -67,6 +67,8 @@ model Tenant {
   status          TenantStatus @default(ACTIVE)
   planId          String
   plan            Plan      @relation(fields: [planId], references: [id])
+  trialEndsAt     DateTime?
+  renewalAt       DateTime?
   limitsOverride  Json      @default("{}")
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @default(now())
@@ -266,4 +268,13 @@ model AuditLog {
 
   @@index([tenantId])
   @@index([actorUserId])
+}
+
+model AppConfig {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.9% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>10/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">90.9% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>10/11</span>
+                <span class='fraction'>0/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -93,65 +93,65 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { UserRole } from '@prisma/client';
-import { Transform } from 'class-transformer';
-import { IsEmail, IsEnum, IsOptional, IsString, MinLength } from 'class-validator';
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { UserRole } from '@prisma/client';</span>
+<span class="cstat-no" title="statement not covered" >import { Transform } from 'class-transformer';</span>
+<span class="cstat-no" title="statement not covered" >import { IsEmail, IsEnum, IsOptional, IsString, MinLength } from 'class-validator';</span>
 &nbsp;
-export class RegisterDto {
+<span class="cstat-no" title="statement not covered" >export class R</span>egisterDto {
   @IsString()
-  name!: string;
+<span class="cstat-no" title="statement not covered" >  name!: string;</span>
 &nbsp;
   @IsEmail()
   @Transform(<span class="fstat-no" title="function not covered" >({</span> value }) =&gt; <span class="cstat-no" title="statement not covered" >value?.toLowerCase()?.trim())</span>
-  email!: string;
+<span class="cstat-no" title="statement not covered" >  email!: string;</span>
 &nbsp;
   @IsString()
   @MinLength(8)
-  password!: string;
+<span class="cstat-no" title="statement not covered" >  password!: string;</span>
 &nbsp;
   @IsOptional()
   @IsEnum(UserRole, {
     message: `role deve ser um dos valores: ${Object.values(UserRole).join(', ')}`,
   })
-  role?: UserRole;
+<span class="cstat-no" title="statement not covered" >  role?: UserRole;</span>
 &nbsp;
   @IsOptional()
   @IsString()
-  tenantSlug?: string;
+<span class="cstat-no" title="statement not covered" >  tenantSlug?: string;</span>
 &nbsp;
   @IsOptional()
   @IsString()
-  locale?: string;
+<span class="cstat-no" title="statement not covered" >  locale?: string;</span>
 }
 &nbsp;</pre></td></tr></table></pre>
 
@@ -160,7 +160,7 @@ export class RegisterDto {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-09T01:28:22.394Z
+                at 2025-12-09T12:49:49.975Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

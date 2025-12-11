@@ -26,5 +26,9 @@ export class RegisterDto {
 
   @IsOptional()
   @IsString()
+  tenantName?: string;
+
+  @IsOptional()
+  @IsString()
   locale?: string;
 }

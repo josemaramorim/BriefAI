@@ -11,7 +11,10 @@ import { AiModule } from './ai/ai.module';
 import { CollaborationsModule } from './collaborations/collaborations.module';
 import { AttachmentsModule } from './attachments/attachments.module';
 import { ExportsModule } from './exports/exports.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { BillingModule } from './billing/billing.module';
 import { TenantMiddleware } from './tenant/tenant.middleware';
+import { AppConfigController } from './prisma/app-config.controller';
 
 @Module({
   imports: [
@@ -36,7 +39,10 @@ import { TenantMiddleware } from './tenant/tenant.middleware';
     CollaborationsModule,
     AttachmentsModule,
     ExportsModule,
+    DashboardModule,
+    BillingModule,
   ],
+  controllers: [AppConfigController],
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {

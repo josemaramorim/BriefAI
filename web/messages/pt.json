@@ -1,0 +1,153 @@
+{
+  "common": {
+    "welcome": "Bem-vindo",
+    "loading": "Carregando...",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "edit": "Editar",
+    "create": "Criar",
+    "search": "Pesquisar",
+    "filter": "Filtrar",
+    "actions": "Ações",
+    "back": "Voltar",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "confirm": "Confirmar",
+    "close": "Fechar"
+  },
+  "auth": {
+    "login": "Entrar",
+    "logout": "Sair",
+    "register": "Registrar",
+    "email": "E-mail",
+    "password": "Senha",
+    "name": "Nome",
+    "tenantName": "Nome da Empresa",
+    "forgotPassword": "Esqueci minha senha",
+    "dontHaveAccount": "Não tem uma conta?",
+    "alreadyHaveAccount": "Já tem uma conta?",
+    "loginSuccess": "Login realizado com sucesso",
+    "registerSuccess": "Cadastro realizado com sucesso",
+    "loginError": "Erro ao fazer login",
+    "registerError": "Erro ao registrar"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "metrics": "Métricas",
+    "briefings": "Briefings",
+    "templates": "Templates",
+    "collaborations": "Colaborações",
+    "storage": "Armazenamento"
+  },
+  "briefings": {
+    "title": "Briefings",
+    "create": "Criar Briefing",
+    "edit": "Editar Briefing",
+    "delete": "Excluir Briefing",
+    "status": {
+      "DRAFT": "Rascunho",
+      "IN_PROGRESS": "Em Progresso",
+      "COMPLETED": "Concluído",
+      "ARCHIVED": "Arquivado"
+    },
+    "progress": "Progresso",
+    "client": "Cliente",
+    "template": "Template",
+    "createdAt": "Criado em",
+    "updatedAt": "Atualizado em"
+  },
+  "templates": {
+    "title": "Templates",
+    "create": "Criar Template",
+    "edit": "Editar Template",
+    "delete": "Excluir Template",
+    "publish": "Publicar",
+    "unpublish": "Despublicar",
+    "version": "Versão",
+    "public": "Público",
+    "private": "Privado"
+  },
+  "collaborations": {
+    "title": "Colaborações",
+    "add": "Adicionar Colaborador",
+    "remove": "Remover Colaborador",
+    "permission": {
+      "VIEW": "Visualizar",
+      "COMMENT": "Comentar",
+      "EDIT": "Editar"
+    }
+  },
+  "comments": {
+    "title": "Comentários",
+    "add": "Adicionar Comentário",
+    "edit": "Editar Comentário",
+    "delete": "Excluir Comentário"
+  },
+  "attachments": {
+    "title": "Anexos",
+    "upload": "Enviar Arquivo",
+    "delete": "Excluir Arquivo",
+    "download": "Baixar",
+    "preview": "Visualizar"
+  },
+  "exports": {
+    "title": "Exportar",
+    "format": {
+      "PDF": "PDF",
+      "JSON": "JSON",
+      "ZIP": "ZIP"
+    },
+    "includeAttachments": "Incluir anexos",
+    "includeComments": "Incluir comentários",
+    "summarized": "Resumido"
+  },
+  "home": {
+    "badge": "Plataforma para times criativos",
+    "heroTitle": "Centralize seus briefings com inteligência artificial",
+    "heroSubtitle": "Organize pedidos, alinhe expectativas com o cliente e ganhe tempo com fluxos de briefing guiados por IA.",
+    "primaryCta": "Começar agora",
+    "secondaryCta": "Ver como funciona",
+    "hint": "Sem cartão de crédito. Comece com um período de teste configurado pelo super admin.",
+    "heroCardTitle": "Um painel pensado para agências, squads e freelancers",
+    "heroCardSubtitle": "Crie, acompanhe e refine briefings em um só lugar.",
+    "stats": {
+      "briefsTitle": "Briefings organizados, nada se perde",
+      "briefsDesc": "Templates consistentes e campos obrigatórios para não faltar nenhuma informação importante.",
+      "briefsBadge": "Fluxos padronizados",
+      "aiTitle": "IA que realmente ajuda",
+      "aiDesc": "Sugestões de texto, perguntas complementares e refinamento de respostas direto no briefing.",
+      "aiBadge": "Assistente BriefAI",
+      "collabTitle": "Colaboração sem ruído",
+      "collabDesc": "Comentários, histórico e permissões por papel para cada membro do time.",
+      "collabBadge": "Equipe alinhada"
+    },
+    "features": {
+      "templatesTitle": "Templates flexíveis",
+      "templatesSubtitle": "Modele seu processo com JSON Schema",
+      "templatesDesc": "Defina a estrutura dos seus briefings com validação automática, campos opcionais e obrigatórios.",
+      "collabTitle": "Colaboração em tempo real",
+      "collabSubtitle": "Trabalhe com clientes e time no mesmo lugar",
+      "collabDesc": "Convide clientes, compartilhe links de revisão e acompanhe comentários em cada etapa.",
+      "aiTitle": "Inteligência artificial integrada",
+      "aiSubtitle": "Sugestões e melhorias de texto",
+      "aiDesc": "Use IA para gerar primeiras versões, refinar respostas e reduzir o retrabalho de briefing."
+    }
+  },
+  "appConfig": {
+    "title": "Configurações da Plataforma",
+    "subtitle": "Ajuste parâmetros globais da aplicação. As alterações são aplicadas imediatamente após salvar.",
+    "logout": "Sair",
+    "empty": "Nenhuma configuração cadastrada.",
+    "keys": {
+      "trial_days": {
+        "label": "Dias de período de teste",
+        "description": "Número de dias do período de trial gratuito para novos tenants."
+      },
+      "warning_days": {
+        "label": "Dias para aviso de expiração",
+        "description": "Quantos dias antes do fim do trial ou da renovação o sistema deve começar a exibir avisos."
+      }
+    }
+  }
+}

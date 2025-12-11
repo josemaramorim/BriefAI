@@ -25,3 +25,13 @@ psql "$DATABASE_URL" -f docs/db-schema.sql
 - Adicionar backend (NestJS) com resolucao de tenant e Prisma usando `DATABASE_URL`.
 - Implementar migracoes automatizadas (Prisma migrate) apontando para a instancia externa.
 - Configurar fila (Redis) e endpoints conforme `docs/mvp-plan.md`.
+
+---
+
+## Parâmetro de Warning de Expiração
+
+- **warning_days** (AppConfig): Define o número de dias antes do fim do trial ou renovação de plano em que o sistema exibe o alerta amarelo (warning) para o usuário.
+- O valor pode ser alterado diretamente na tabela AppConfig, sem necessidade de deploy.
+- Exemplo: Se warning_days = 3, o alerta será exibido quando faltarem 3 dias ou menos para o fim do período.
+
+---

@@ -84,5 +84,8 @@
     "INVALID_EMAIL": "E-mail inválido",
     "PASSWORD_TOO_SHORT": "Senha deve ter no mínimo 8 caracteres",
     "INVALID_UUID": "ID inválido"
+  },
+  "DASHBOARD": {
+    "METRICS_RETRIEVED": "Métricas recuperadas com sucesso"
   }
 }

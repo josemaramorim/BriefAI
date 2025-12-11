@@ -4,6 +4,16 @@ import * as bcrypt from 'bcrypt';
 const prisma = new PrismaClient();
 
 async function main() {
+    // AppConfig: warning_days
+    await prisma.appConfig.upsert({
+      where: { key: 'warning_days' },
+      update: { value: '3', description: 'Dias para exibir warning de expiração de trial/renovação' },
+      create: {
+        key: 'warning_days',
+        value: '3',
+        description: 'Dias para exibir warning de expiração de trial/renovação',
+      },
+    });
   console.log('🌱 Seeding database...');
 
   const defaultPassword = process.env.SEED_DEFAULT_PASSWORD || 'ChangeMe123!';

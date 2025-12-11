@@ -1,0 +1,153 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "create": "Create",
+    "search": "Search",
+    "filter": "Filter",
+    "actions": "Actions",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "confirm": "Confirm",
+    "close": "Close"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "tenantName": "Company Name",
+    "forgotPassword": "Forgot password",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "registerSuccess": "Registration successful",
+    "loginError": "Login error",
+    "registerError": "Registration error"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "metrics": "Metrics",
+    "briefings": "Briefings",
+    "templates": "Templates",
+    "collaborations": "Collaborations",
+    "storage": "Storage"
+  },
+  "briefings": {
+    "title": "Briefings",
+    "create": "Create Briefing",
+    "edit": "Edit Briefing",
+    "delete": "Delete Briefing",
+    "status": {
+      "DRAFT": "Draft",
+      "IN_PROGRESS": "In Progress",
+      "COMPLETED": "Completed",
+      "ARCHIVED": "Archived"
+    },
+    "progress": "Progress",
+    "client": "Client",
+    "template": "Template",
+    "createdAt": "Created at",
+    "updatedAt": "Updated at"
+  },
+  "templates": {
+    "title": "Templates",
+    "create": "Create Template",
+    "edit": "Edit Template",
+    "delete": "Delete Template",
+    "publish": "Publish",
+    "unpublish": "Unpublish",
+    "version": "Version",
+    "public": "Public",
+    "private": "Private"
+  },
+  "collaborations": {
+    "title": "Collaborations",
+    "add": "Add Collaborator",
+    "remove": "Remove Collaborator",
+    "permission": {
+      "VIEW": "View",
+      "COMMENT": "Comment",
+      "EDIT": "Edit"
+    }
+  },
+  "comments": {
+    "title": "Comments",
+    "add": "Add Comment",
+    "edit": "Edit Comment",
+    "delete": "Delete Comment"
+  },
+  "attachments": {
+    "title": "Attachments",
+    "upload": "Upload File",
+    "delete": "Delete File",
+    "download": "Download",
+    "preview": "Preview"
+  },
+  "exports": {
+    "title": "Export",
+    "format": {
+      "PDF": "PDF",
+      "JSON": "JSON",
+      "ZIP": "ZIP"
+    },
+    "includeAttachments": "Include attachments",
+    "includeComments": "Include comments",
+    "summarized": "Summarized"
+  },
+  "home": {
+    "badge": "Platform for creative teams",
+    "heroTitle": "Centralize your briefs with artificial intelligence",
+    "heroSubtitle": "Organize requests, align expectations with clients and save time with AI-guided briefing flows.",
+    "primaryCta": "Get started",
+    "secondaryCta": "See how it works",
+    "hint": "No credit card required. Start with a trial period defined by the super admin.",
+    "heroCardTitle": "A workspace built for agencies, squads and freelancers",
+    "heroCardSubtitle": "Create, track and refine briefs in one place.",
+    "stats": {
+      "briefsTitle": "Nothing gets lost in the briefing",
+      "briefsDesc": "Consistent templates and required fields so you never miss critical information.",
+      "briefsBadge": "Standardized flows",
+      "aiTitle": "AI that actually helps",
+      "aiDesc": "Text suggestions, follow-up questions and refinement directly in the briefing.",
+      "aiBadge": "BriefAI assistant",
+      "collabTitle": "Collaboration without noise",
+      "collabDesc": "Comments, history and role-based permissions for each team member.",
+      "collabBadge": "Aligned team"
+    },
+    "features": {
+      "templatesTitle": "Flexible templates",
+      "templatesSubtitle": "Model your process with JSON Schema",
+      "templatesDesc": "Define the structure of your briefs with automatic validation and required/optional fields.",
+      "collabTitle": "Real-time collaboration",
+      "collabSubtitle": "Work with clients and team in one place",
+      "collabDesc": "Invite clients, share review links and track comments on every step.",
+      "aiTitle": "AI built into the flow",
+      "aiSubtitle": "Suggestions and text improvements",
+      "aiDesc": "Use AI to generate first drafts, refine answers and reduce briefing rework."
+    }
+  },
+  "appConfig": {
+    "title": "Platform Settings",
+    "subtitle": "Adjust global application parameters. Changes are applied immediately after saving.",
+    "logout": "Sign out",
+    "empty": "No settings defined.",
+    "keys": {
+      "trial_days": {
+        "label": "Trial period (days)",
+        "description": "Number of days for the free trial period for new tenants."
+      },
+      "warning_days": {
+        "label": "Warning before expiration (days)",
+        "description": "How many days before trial end or renewal the system should start showing warnings."
+      }
+    }
+  }
+}

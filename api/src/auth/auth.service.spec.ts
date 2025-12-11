@@ -12,6 +12,7 @@ const createTenant = (overrides: Partial<Tenant> = {}): Tenant => ({
   slug: 'tenant',
   status: TenantStatus.ACTIVE,
   planId: 'plan',
+  trialEndsAt: null,
   limitsOverride: {},
   createdAt: new Date(),
   updatedAt: new Date(),
